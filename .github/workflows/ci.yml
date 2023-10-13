@@ -166,6 +166,8 @@ jobs:
 
       - name: Submit Dependency Snapshot
         uses: advanced-security/maven-dependency-submission-action@v3
+        with:
+          directory: ./java-api
 
       - name: Archive scanning results
         if: ${{ steps.seeker-check.outputs.enabled == 'true' }}
